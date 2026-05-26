@@ -1,0 +1,61 @@
+/* style.css */
+body {
+    margin: 0; padding: 0;
+    display: flex; justify-content: center; align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e5128, #4e944f, #d4af37);
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+/* تنسيق الشاشة المنبثقة */
+.overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white; padding: 30px; border-radius: 20px;
+    text-align: center; width: 90%; max-width: 400px;
+}
+
+input {
+    width: 80%; padding: 12px; margin: 20px 0;
+    border: 2px solid #d4af37; border-radius: 10px;
+    font-size: 1rem; text-align: center; outline: none;
+}
+
+/* تنسيق بطاقة التهنئة */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px; border-radius: 25px;
+    text-align: center; max-width: 450px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    animation: float 4s ease-in-out infinite;
+    border: 4px solid #d4af37;
+}
+
+.icon { font-size: 80px; }
+h1 { color: #1e5128; font-size: 2.2rem; }
+
+button {
+    padding: 12px 30px; background: #d4af37; color: white;
+    border: none; border-radius: 50px; cursor: pointer;
+    font-weight: bold; transition: 0.3s;
+}
+
+button:hover { transform: scale(1.1); background: #1e5128; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.confetti {
+    position: absolute; width: 10px; height: 10px;
+    animation: fall 3s linear forwards; z-index: 999;
+}
+
+@keyframes fall { to { transform: translateY(100vh) rotate(360deg); } }

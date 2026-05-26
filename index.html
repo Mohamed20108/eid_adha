@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تهنئة عيد الأضحى المخصصة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="name-modal" class="overlay">
+        <div class="modal-content">
+            <h2>مرحباً بك!</h2>
+            <p>من فضلك أدخل اسمك</p>
+            <input type="text" id="user-name-input" placeholder="اكتب اسمك هنا...">
+            <button onclick="startCelebration()">دخول</button>
+        </div>
+    </div>
+
+    <div id="main-content" class="card" style="display: none;">
+        <div class="icon">🐑</div>
+        
+        <h1 id="welcome-msg">عيد أضحى سعيد</h1>
+        <p>كل عام وأنتم بخير، أعاده الله علينا وعليكم باليمن والبركات.</p>
+        <button onclick="createConfetti()">أرسل بهجة العيد 🎉</button>
+    </div>
+
+    <div id="confetti-container"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
